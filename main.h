@@ -1,6 +1,8 @@
 #ifndef MAIN_H
 #define MAIN_H
 
+#define BUFSIZE 50
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -28,8 +30,10 @@ int handlers(const char *, va_list);
 int prints(char *);
 int _putchar(char);
 long int _strlen(const char *);
+char *itoa(long int, int);
 
 int print_char(va_list);
 int print_strings(va_list);
+int print_base10(va_list);
 
 #endif /*MAIN_H*/
