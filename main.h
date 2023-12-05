@@ -14,9 +14,15 @@ typedef struct print_format{
 
 
 int _printf(const char *format, ...);
+
+int percent_handler(const char *, va_list, int *);
+int handlers(const char *, va_list);
+
+int prints(char *);
 int _putchar(char);
-int percentage_handler(char *, va_list, int *);
-int print_char(char );
-int handler(char *, va_list);
+long int _strlen(const char *);
+
+int print_char(va_list );
+int print_strings(va_list);
 
 #endif /*MAIN_H*/
