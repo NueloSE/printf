@@ -50,7 +50,7 @@ int percent_handler(const char *string, va_list arg, int *i)
 		return (1);
 	}
 
-	specifier_num = sizeof(array_spec) /sizeof(array_spec[0]);
+	specifier_num = sizeof(array_spec) / sizeof(array_spec[0]);
 	for (j = 0; j < specifier_num; j++)
 	{
 		if (array_spec[j].specifier == string[*i])

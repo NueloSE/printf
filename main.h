@@ -7,7 +7,14 @@
 #include <stdarg.h>
 #include <unistd.h>
 
-typedef struct print_format{
+/**
+ * struct print_format - a secondary data structure
+ * @specifier: a format specifier
+ * @func: a function pointer
+*/
+
+typedef struct print_format
+{
 	char specifier;
 	int (*func)(va_list);
 } format_s;
@@ -22,7 +29,7 @@ int prints(char *);
 int _putchar(char);
 long int _strlen(const char *);
 
-int print_char(va_list );
+int print_char(va_list);
 int print_strings(va_list);
 
 #endif /*MAIN_H*/
