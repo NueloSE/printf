@@ -8,6 +8,8 @@
 #include <string.h>
 #include <stdarg.h>
 #include <unistd.h>
+#include <stdint.h>
+#include <limits.h>
 
 /**
  * struct print_format - a secondary data structure
