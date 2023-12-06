@@ -1,0 +1,52 @@
+#include <stdio.h>
+
+// Custom conversion specifier function
+void printBinary(unsigned int n) {
+    if (n == 0) {
+        printf("0");
+        return;
+    }
+
+    int binary[32];  // Assuming 32-bit integer
+    int i = 0;
+
+    while (n > 0) {
+        binary[i] = n % 2;
+        n = n / 2;
+        i++;
+    }
+
+    // Print the binary representation in reverse order
+    for (int j = i - 1; j >= 0; j--) {
+        printf("%d", binary[j]);
+    }
+}
+
+// Custom printf function with 'b' specifier
+int my_printf(const char *format, ...) {
+    va_list args;
+    va_start(args, format);
+
+    while (*format) {
+        if (*format == '%' && *(format + 1) == 'b') {
+            unsigned int value = va_arg(args, unsigned int);
+            printBinary(value);
+            format += 2;  // Skip 'b' specifier
+        } else {
+            putchar(*format);
+            format++;
+        }
+    }
+
+    va_end(args);
+    return 0;
+}
+
+int main() {
+    unsigned int num = 42;
+    
+    // Use the custom printf function with 'b' specifier
+    my_printf("Binary representation of %u is %b\n", num, num);
+
+    return 0;
+}
