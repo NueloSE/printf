@@ -22,11 +22,10 @@ char *itoa(long int num, int base)
 		n = -num;
 		sign = '-';
 	}
-	while (n != 0)
-	{
+	do {
 		*(--ptr) = array[n % base];
 		n = n / base;
-	}
+	} while (n != 0);
 	if (sign)
 	{
 		*--ptr = sign;
