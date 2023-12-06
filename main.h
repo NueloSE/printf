@@ -35,5 +35,6 @@ char *itoa(long int, int);
 int print_char(va_list);
 int print_strings(va_list);
 int print_base10(va_list);
+int binary_print(va_list);
 
 #endif /*MAIN_H*/
