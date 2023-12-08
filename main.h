@@ -38,6 +38,13 @@ int print_char(va_list);
 int print_strings(va_list);
 int print_base10(va_list);
 int binary_handler(va_list);
+int print_unsigned_int(va_list);
+int octal_print(va_list);
+int hexa_upper_handler(va_list);
+
+int hexa_lower_print(unsigned int);
+int hexa_lower_handler(va_list);
+int hexa_upper_print(unsigned int);
 
 int binary_print(unsigned int);
 
