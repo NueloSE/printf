@@ -39,7 +39,9 @@ int percent_handler(const char *string, va_list arg, int *i)
 	format_s array_spec[] = {
 		{'c', print_char}, {'s', print_strings},
 		{'d', print_base10}, {'i', print_base10},
-		{'b', binary_handler},
+		{'b', binary_handler}, {'u', print_unsigned_int},
+		{'o', octal_print}, {'x', hexa_lower_handler},
+		{'X', hexa_upper_handler},
 	};
 	*i = *i + 1;
 
